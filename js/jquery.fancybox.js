@@ -57,7 +57,7 @@
         toolbar : true,
 
         // What buttons should appear in the top right corner.
-        // Buttons will be created using templates from `btnTpl` option
+        // Buttons will be created using Properties from `btnTpl` option
         // and they will be placed into toolbar (class="fancybox-toolbar"` element)
         buttons : [
             'slideShow',
@@ -74,7 +74,7 @@
 
         // Should display buttons at top right corner of the content
         // If 'auto' - they will be created for content having type 'html', 'inline' or 'ajax'
-        // Use template from `btnTpl.smallBtn` for customization
+        // Use property from `btnTpl.smallBtn` for customization
         smallBtn : 'auto',
 
         // Disable right-click and use simple image protection for images
@@ -108,7 +108,7 @@
 
         iframe : {
 
-            // Iframe template
+            // Iframe property
             tpl : '<iframe id="fancybox-frame{rnd}" name="fancybox-frame{rnd}" class="fancybox-iframe" frameborder="0" vspace="0" hspace="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen allowtransparency="true" src=""></iframe>',
 
             // Preload iframe before displaying it
@@ -168,7 +168,7 @@
         // Custom CSS class for layout
         baseClass : '',
 
-        // Base template for layout
+        // Base property for layout
         baseTpl	:
             '<div class="fancybox-container" role="dialog" tabindex="-1">' +
                 '<div class="fancybox-bg"></div>' +
@@ -183,10 +183,10 @@
                 '</div>' +
             '</div>',
 
-        // Loading indicator template
+        // Loading indicator property
         spinnerTpl : '<div class="fancybox-loading"></div>',
 
-        // Error message template
+        // Error message property
         errorTpl : '<div class="fancybox-error"><p>{{ERROR}}<p></div>',
 
         btnTpl : {
@@ -568,14 +568,14 @@
             // Build html markup and set references
             // ====================================
 
-            // Build html code for buttons and insert into main template
+            // Build html code for buttons and insert into main property
             buttonStr = '';
 
             $.each( firstItemOpts.buttons, function( index, value ) {
                 buttonStr += ( firstItemOpts.btnTpl[ value ] || '' );
             });
 
-            // Create markup from base template, it will be initially hidden to
+            // Create markup from base property, it will be initially hidden to
             // avoid unnecessary work like painting while initializing is not complete
             $container = $(
                 self.translate( self,
@@ -609,7 +609,7 @@
         },
 
 
-        // Simple i18n support - replaces object keys found in template
+        // Simple i18n support - replaces object keys found in property
         // with corresponding values
         // ============================================================
 
@@ -2901,7 +2901,7 @@
         },
 
 
-        // Shortcut for setting "translate3d" properties for element
+        // Shortcut for setting "translate3d" Properties for element
         // Can set be used to set opacity, too
         // ========================================================
 
@@ -3140,7 +3140,7 @@
 		return url;
 	};
 
-	// Object containing properties for each media type
+	// Object containing Properties for each media type
 
 	var defaults = {
 		youtube : {
@@ -4502,7 +4502,7 @@
 		return false;
 	})();
 
-	// If browser does not have Full Screen API, then simply unset default button template and stop
+	// If browser does not have Full Screen API, then simply unset default button property and stop
 	if ( !fn ) {
 
 		if ( $ && $.fancybox ) {

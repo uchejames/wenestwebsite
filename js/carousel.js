@@ -13,8 +13,8 @@
       doSpanize: function () {
         settings.letters.html(function (i, el) {
           var spanize = $.trim(el).split("");
-          var template = "<span>" + spanize.join("</span><span>") + "</span>";
-          return template;
+          var property = "<span>" + spanize.join("</span><span>") + "</span>";
+          return property;
         });
       },
     };

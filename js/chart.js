@@ -3002,11 +3002,11 @@
     xt.set("animations", {
       colors: {
         type: "color",
-        properties: ["color", "borderColor", "backgroundColor"],
+        Properties: ["color", "borderColor", "backgroundColor"],
       },
       numbers: {
         type: "number",
-        properties: ["x", "y", "borderWidth", "radius", "tension"],
+        Properties: ["x", "y", "borderWidth", "radius", "tension"],
       },
     }),
     xt.describe("animations", { _fallback: "animation" }),
@@ -3028,17 +3028,17 @@
     });
   class hn {
     constructor(t, e) {
-      (this._chart = t), (this._properties = new Map()), this.configure(e);
+      (this._chart = t), (this._Properties = new Map()), this.configure(e);
     }
     configure(t) {
       if (!U(t)) return;
-      const e = this._properties;
+      const e = this._Properties;
       Object.getOwnPropertyNames(t).forEach((i) => {
         const n = t[i];
         if (!U(n)) return;
         const o = {};
         for (const t of cn) o[t] = n[t];
-        ((Y(n.properties) && n.properties) || [i]).forEach((t) => {
+        ((Y(n.Properties) && n.Properties) || [i]).forEach((t) => {
           (t !== i && e.has(t)) || e.set(t, o);
         });
       });
@@ -3076,7 +3076,7 @@
       );
     }
     _createAnimations(t, e) {
-      const i = this._properties,
+      const i = this._Properties,
         n = [],
         o = t.$animations || (t.$animations = {}),
         s = Object.keys(e),
@@ -3106,7 +3106,7 @@
       return n;
     }
     update(t, e) {
-      if (0 === this._properties.size) return void Object.assign(t, e);
+      if (0 === this._Properties.size) return void Object.assign(t, e);
       const i = this._createAnimations(t, e);
       return i.length ? (a.add(this._chart, i), !0) : void 0;
     }
@@ -6506,7 +6506,7 @@
       animations: {
         numbers: {
           type: "number",
-          properties: ["x", "y", "base", "width", "height"],
+          Properties: ["x", "y", "base", "width", "height"],
         },
       },
     }),
@@ -6600,7 +6600,7 @@
       animations: {
         numbers: {
           type: "number",
-          properties: ["x", "y", "borderWidth", "radius"],
+          Properties: ["x", "y", "borderWidth", "radius"],
         },
       },
     }),
@@ -6823,7 +6823,7 @@
       animations: {
         numbers: {
           type: "number",
-          properties: [
+          Properties: [
             "circumference",
             "endAngle",
             "innerRadius",
@@ -7108,7 +7108,7 @@
       animations: {
         numbers: {
           type: "number",
-          properties: [
+          Properties: [
             "x",
             "y",
             "startAngle",
@@ -9760,7 +9760,7 @@
         animations: {
           numbers: {
             type: "number",
-            properties: ["x", "y", "width", "height", "caretX", "caretY"],
+            Properties: ["x", "y", "width", "height", "caretX", "caretY"],
           },
           opacity: { easing: "linear", duration: 200 },
         },

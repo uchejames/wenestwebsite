@@ -41,7 +41,7 @@
           "images/banner/contact.jpg",
           "101 E 129th St, East Chicago, IN 46312, US",
           "1-333-345-6868",
-          "themesflat@gmail.com"
+          "wenestofficial@gmail.com"
         ),
         40.709327,
         -74.004815,

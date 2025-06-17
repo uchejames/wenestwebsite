@@ -6882,7 +6882,7 @@ fieldset:disabled .btn {
 
 .carousel-fade .carousel-item {
     opacity: 0;
-    transition-property: opacity;
+    transition-template: opacity;
     transform: none
 }
 
